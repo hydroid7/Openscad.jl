@@ -1,0 +1,6 @@
+name = "Openscad"
+uuid = "a526004a-25f0-11e9-1359-f54c8c8da442"
+authors = ["Lóránt Meszlényi <meszlenyilorant@gmail.com>"]
+version = "0.1.0"
+
+[deps]
