@@ -21,7 +21,7 @@ struct End <: Terminal end
 toString(s::End) = ";\n"
 
 
-function editor(tree::Op, show::Bool = false)
+function editor(tree::Op, show::Bool = true)
     tempFile = toString(tree)
     path = "/tmp/$(hash(tree)).scad"
     open(path, "w") do f

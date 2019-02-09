@@ -24,4 +24,8 @@ Openscad.Union([
     End()
 ])
 
+toString(tree) # Convert tree to string.
+
+editor(tree) # Save it temporary and open editor to view the result.
+
 ```
