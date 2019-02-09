@@ -1,19 +1,25 @@
 using Openscad
+using Test
 
-square = Square([4, 5], true)
-square2 = Square([0, 0], true)
-tree =
-Openscad.Union([
-    Circle(3, false),
-    square,
-    Translate([1, 1, 1], [
-        Openscad.Union([
-            square,
-            square2
-        ])
-    ]),
-    End()
-])
+function test2d()
+    square = Square([4, 5], true)
+    square2 = Square([0, 0], true)
+    tree =
+    Openscad.Union([
+        Circle(3, false),
+        square,
+        Translate([1, 1, 1], [
+            Openscad.Union([
+                square,
+                square2
+            ])
+        ]),
+        End()
+    ])
+    # println(toString(tree))
+    editor(tree, false)
+end
 
-println(toString(tree))
-editor(tree, true)
+@testset "2d shapes" begin
+           @test (typeof(test2d()) == String)
+       end;
