@@ -20,7 +20,6 @@ include("./Transforms.jl")
 struct End <: Terminal end
 toString(s::End) = ";\n"
 
-
 function editor(tree::Op, show::Bool = true)
     tempFile = toString(tree)
     path = "/tmp/$(hash(tree)).scad"
