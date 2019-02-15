@@ -5,7 +5,7 @@ abstract type Group <: Op end
 abstract type Terminal <: Op end
 
 export Circle, Square, End,
-    Union, Difference,
+    Unify, Difference,
     Translate,
     toString, editor
 
@@ -18,7 +18,7 @@ include("./Booleans.jl")
 include("./Transforms.jl")
 
 struct End <: Terminal end
-toString(s::End) = ";\n"
+toString(s::End) = ";"
 
 function editor(tree::Op, show::Bool = true)
     tempFile = toString(tree)
