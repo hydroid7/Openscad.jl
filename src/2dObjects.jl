@@ -11,5 +11,5 @@ struct Polygon
     fields
 end
 
-toString(c::Circle) = "circle(r = $(c.r), center = $(c.center));\n"
-toString(s::Square) = "square(size = [$(s.pos[1]), $(s.pos[2])], center = $(s.center));\n"
+toString(c::Circle) = "circle(r = $(c.r), center = $(c.center));"
+toString(s::Square) = "square(size = [$(s.pos[1]), $(s.pos[2])], center = $(s.center));"

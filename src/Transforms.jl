@@ -5,7 +5,7 @@ struct Translate <: Group
 end
 
 function toString(t::Translate)
-    output = "translate([$(t.vector[1]), $(t.vector[2]), $(t.vector[3])]) {\n"
+    output = "translate([$(t.vector[1]), $(t.vector[2]), $(t.vector[3])]) {"
     for c in t.elements
         output = output * toString(c)
     end

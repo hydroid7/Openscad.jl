@@ -20,5 +20,5 @@ struct Polyhedron <: Terminal
 end
 
 
-toString(c::Cube) = "cube(size = [$(c.size[1]), $(c.size[2]), $(c.size[3])]);\n"
-toString(s::Sphere) = "sphere($(s.r));\n"
+toString(c::Cube) = "cube(size = [$(c.size[1]), $(c.size[2]), $(c.size[3])]);"
+toString(s::Sphere) = "sphere($(s.r));"
